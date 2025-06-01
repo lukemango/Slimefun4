@@ -148,6 +148,13 @@ public class WoodcutterAndroid extends ProgrammableAndroid {
                 saplingType = Material.WARPED_FUNGUS;
                 soilRequirement = SlimefunTag.FUNGUS_SOIL::isTagged;
             }
+            case PALE_OAK_LOG,
+                PALE_OAK_WOOD,
+                STRIPPED_PALE_OAK_LOG,
+                STRIPPED_PALE_OAK_WOOD -> {
+                saplingType = Material.PALE_OAK_SAPLING;
+                soilRequirement = SlimefunTag.DIRT_VARIANTS::isTagged;
+            }
             default -> {}
         }
 

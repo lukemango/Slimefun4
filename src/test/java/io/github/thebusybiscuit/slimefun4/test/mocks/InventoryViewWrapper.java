@@ -50,6 +50,11 @@ public class InventoryViewWrapper extends InventoryViewMock {
     }
 
     @Override
+    public void open() {
+
+    }
+
+    @Override
     public void setItem(int slot, @Nullable ItemStack item) {
         Inventory inventory = getInventory(slot);
         if (inventory != null) {

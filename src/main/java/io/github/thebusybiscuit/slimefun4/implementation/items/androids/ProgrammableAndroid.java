@@ -807,7 +807,7 @@ public class ProgrammableAndroid extends SlimefunItem implements InventoryBlock,
             int rest = newFuel.getType().getMaxStackSize() - currentFuel.getAmount();
 
             if (rest > 0) {
-                int amount = newFuel.getAmount() > rest ? rest : newFuel.getAmount();
+                int amount = Math.min(newFuel.getAmount(), rest);
                 menu.replaceExistingItem(43, CustomItemStack.create(newFuel, currentFuel.getAmount() + amount));
                 ItemUtils.consumeItem(newFuel, amount, false);
             }
